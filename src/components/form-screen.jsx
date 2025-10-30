@@ -182,7 +182,7 @@ export default function FormScreen({ onSubmit }) {
               </label>
               <input
                 type="tel"
-                placeholder="+1 (555) 123-4567"
+                placeholder="9876542310"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 onFocus={() => setFocusedField('phone')}
