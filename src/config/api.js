@@ -5,9 +5,7 @@ export const API_CONFIG = {
   
   // API Endpoints
   ENDPOINTS: {
-    ANALYZE_AUDIO: '/api/audio-analysis/analyze-audio',
-    ANALYZE_AUDIO_JSON: '/api/audio-analysis/analyze-audio-json',
-    HEALTH_CHECK: '/api/audio-analysis/health'
+    AUDIO_ANALYSIS_ANALYZE: '/api/audio-analysis/analyze'
   },
   
   // Request configuration

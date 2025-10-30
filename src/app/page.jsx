@@ -1,13 +1,8 @@
 "use client"
 
-import AudioRecorder from "../components/audio-recorder"
-import ResultsDisplay from "../components/results-display"
-import AILoadingScreen from "../components/ai-loading-screen"
-import { useAudioAnalysis } from "../hooks/useAudioAnalysis"
+import McqForm from "../components/mcq-form"
 
 export default function Home() {
-  const { analyzeAudio, isLoading, error, results, reset } = useAudioAnalysis()
-
   return (
     <main className="min-h-screen relative overflow-hidden">
       
@@ -26,22 +21,11 @@ export default function Home() {
       {/* Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center p-4">
         <div className="w-full max-w-md">
-          {isLoading ? (
-            <AILoadingScreen />
-          ) : !results ? (
-            <AudioRecorder onAnalysis={analyzeAudio} isLoading={isLoading} />
-          ) : (
-            <ResultsDisplay results={results} onReset={reset} />
-          )}
+          <McqForm />
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-        <p className="text-xs text-muted-foreground text-center">
-          🏖️ Get Your Vibe Report • AI-Powered Travel Personality Analysis ✨
-        </p>
-      </div>
+      
 
     </main>
   )
